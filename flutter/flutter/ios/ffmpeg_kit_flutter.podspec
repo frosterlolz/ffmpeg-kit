@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name             = 'ffmpeg_kit_flutter'
-  s.version          = '6.0.3'
+  s.version          = '1.0.0'
   s.summary          = 'FFmpeg Kit for Flutter'
   s.description      = 'A Flutter plugin for running FFmpeg and FFprobe commands.'
-  s.homepage         = 'https://github.com/arthenica/ffmpeg-kit'
+  s.homepage         = 'https://github.com/frosterlolz/ffmpeg-kit'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'ARTHENICA' => 'open-source@arthenica.com' }
+  s.author           = { 'Frosterlolz' => 'mihailvezettambov@gmail.com' }
 
   s.platform            = :ios
   s.requires_arc        = true
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.source_files        = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
 
-  s.default_subspec     = 'https'
+  s.default_subspec     = 'min-gpl'
 
   s.dependency          'Flutter'
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.subspec 'min' do |ss|
     ss.source_files         = 'Classes/**/*'
     ss.public_header_files  = 'Classes/**/*.h'
-    ss.dependency 'ffmpeg-kit-ios-min', "6.0"
+    ss.dependency 'ffmpeg-kit-ios-min', "1.0.0"
     ss.ios.deployment_target = '12.1'
   end
 
@@ -37,7 +37,7 @@ Pod::Spec.new do |s|
   s.subspec 'min-gpl' do |ss|
     ss.source_files         = 'Classes/**/*'
     ss.public_header_files  = 'Classes/**/*.h'
-    ss.dependency 'ffmpeg-kit-ios-min-gpl', "6.0"
+    ss.dependency 'demo-min-gpl-ffmpeg-kit-ios', "1.0"
     ss.ios.deployment_target = '12.1'
   end
 
